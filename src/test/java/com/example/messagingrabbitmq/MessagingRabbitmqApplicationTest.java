@@ -16,10 +16,7 @@
 
 package com.example.messagingrabbitmq;
 
-import java.util.concurrent.TimeUnit;
-
 import org.junit.jupiter.api.Test;
-
 import org.springframework.amqp.AmqpConnectException;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -43,7 +40,6 @@ public class MessagingRabbitmqApplicationTest {
 		try {
 			rabbitTemplate.convertAndSend(MessagingRabbitmqApplication.queueName,
 					"Hello from RabbitMQ!");
-			receiver.getLatch().await(10000, TimeUnit.MILLISECONDS);
 		}
 		catch (AmqpConnectException e) {
 			// ignore - rabbit is not running

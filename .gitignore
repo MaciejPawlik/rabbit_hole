@@ -33,7 +33,6 @@ bin
 target
 build/
 .gradle
-test/
 
 # Eclipse Project Files #
 
