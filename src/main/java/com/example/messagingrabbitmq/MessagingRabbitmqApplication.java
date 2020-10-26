@@ -23,7 +23,7 @@ public class MessagingRabbitmqApplication {
 		return new Queue(queueName, false);
 	}
 
-	@Bean
+	/*@Bean
 	TopicExchange exchange() {
 		return new TopicExchange(topicExchangeName);
 	}
@@ -31,7 +31,7 @@ public class MessagingRabbitmqApplication {
 	@Bean
 	Binding binding(Queue queue, TopicExchange exchange) {
 		return BindingBuilder.bind(queue).to(exchange).with("foo.bar.#");
-	}
+	}*/
 
 	@Bean
 	SimpleMessageListenerContainer container(ConnectionFactory connectionFactory,
